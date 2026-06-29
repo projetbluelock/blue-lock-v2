@@ -6,6 +6,21 @@ const player = {
   objectif: "Meilleur latéral gauche du monde"
 };
 
+// ── Stockage en mémoire (remplace localStorage bloqué dans les iframes) ──────
+const doneCache = {};
+
+function setDone(key, value) {
+  doneCache[key] = value;
+}
+
+function getDone(key) {
+  return doneCache[key] === true;
+}
+
+function toggleDone(key) {
+  doneCache[key] = !doneCache[key];
+}
+
 const phaseSummaries = {
   fondations: {
     title: "Phase 1 · Fondations (Semaines 1–6)",
@@ -690,7 +705,7 @@ const phasePrograms = {
   }
 };
 
-// ── Lightbox (initialisée une seule fois au démarrage) ────────────────────────
+// ── Lightbox ──────────────────────────────────────────────────────────────────
 
 function initLightbox() {
   if (document.getElementById("lightbox-overlay")) return;
@@ -719,9 +734,7 @@ function initLightbox() {
       justify-content: center;
       padding: 1rem;
     }
-    #lightbox-overlay.active {
-      display: flex;
-    }
+    #lightbox-overlay.active { display: flex; }
     #lightbox-inner {
       position: relative;
       max-width: 100%;
@@ -759,10 +772,7 @@ function initLightbox() {
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
     }
-    .session-image {
-      position: relative;
-      margin-top: 0.75rem;
-    }
+    .session-image { position: relative; margin-top: 0.75rem; }
     .session-image img {
       width: 100%;
       border-radius: 8px;
@@ -770,9 +780,7 @@ function initLightbox() {
       display: block;
       transition: opacity 0.15s ease;
     }
-    .session-image img:active {
-      opacity: 0.85;
-    }
+    .session-image img:active { opacity: 0.85; }
     .img-zoom-hint {
       display: flex;
       align-items: center;
@@ -781,7 +789,6 @@ function initLightbox() {
       margin-top: 0.35rem;
       font-size: 0.78rem;
       opacity: 0.55;
-      color: inherit;
       pointer-events: none;
       user-select: none;
     }
@@ -814,7 +821,7 @@ function initLightbox() {
     if (e.key === "Escape") closeLightbox();
   });
 
-  // Délégation globale sur document — fonctionne même après re-rendu des cartes
+  // Délégation globale — fonctionne même après re-rendu des cartes
   document.addEventListener("click", (e) => {
     const img = e.target.closest(".session-image img");
     if (img) openLightbox(img.src, img.alt);
@@ -850,10 +857,10 @@ function renderWeek(phaseKey, weekNumber) {
   weekPlan.forEach((session, index) => {
     const catalogItem = sessionCatalog[session.key];
     const doneKey = `phase_${phaseKey}_week_${weekNumber}_session_${index}`;
-    const done = localStorage.getItem(doneKey) === "1";
+    const done = getDone(doneKey);
 
     const card = document.createElement("article");
-    card.className = "session-card";
+    card.className = "session-card" + (done ? " session-done" : "");
 
     let title = "Séance";
     let type = "";
@@ -894,7 +901,7 @@ function renderWeek(phaseKey, weekNumber) {
       ${imageHtml}
       <div class="session-actions">
         <button class="session-done-btn" data-key="${doneKey}">
-          ${done ? "Séance faite ✔" : "Marquer comme faite"}
+          ${done ? "✔ Séance faite" : "Marquer comme faite"}
         </button>
         <span class="session-status ${done ? "done" : ""}">
           ${done ? "✅ Cochée" : "⬜ Non cochée"}
@@ -905,11 +912,11 @@ function renderWeek(phaseKey, weekNumber) {
     container.appendChild(card);
   });
 
+  // Listener sur les boutons "marquer comme faite"
   container.querySelectorAll(".session-done-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const key = btn.dataset.key;
-      const alreadyDone = localStorage.getItem(key) === "1";
-      localStorage.setItem(key, alreadyDone ? "0" : "1");
+      toggleDone(key);
       const phaseSelect = document.getElementById("phase-select");
       const weekInput = document.getElementById("week-input");
       renderWeek(phaseSelect.value, parseInt(weekInput.value, 10) || 1);
@@ -918,7 +925,6 @@ function renderWeek(phaseKey, weekNumber) {
 }
 
 function initApp() {
-  // Lightbox initialisée UNE SEULE FOIS ici
   initLightbox();
 
   const phaseSelect = document.getElementById("phase-select");
