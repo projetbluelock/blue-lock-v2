@@ -124,7 +124,7 @@ const sessionCatalog = {
       "Série 3 : 4 × 60 m (montée + retour) avec ballon, récup 1 min",
       "Retour calme + étirements 10 min"
     ],
-    image: "schemes/fond_endurance_intervalles.png"
+    image: "schemes/solo_endurance_intervalles.png"
   },
   fond_duel_1v1_base: {
     title: "1v1 · Fondamentaux défensifs",
@@ -139,7 +139,7 @@ const sessionCatalog = {
       "Contre-pied : sprint + pivot 180° sur signal, 4 × 5 reps",
       "Visualisation : 5 min yeux fermés, imaginer 10 duels gagnés"
     ],
-    image: "schemes/fond_duel_1v1_base.png"
+    image: "schemes/solo_duel_1v1.png"
   },
   fond_repos_actif: {
     title: "Repos actif · Récupération",
@@ -171,7 +171,7 @@ const sessionCatalog = {
       "Gainage de fin : 2 × 60 s",
       "Protéines dans les 30 min post-séance (shake ou repas)"
     ],
-    image: "schemes/dev_force_puissance.png"
+    image: "schemes/solo_force_globale.png"
   },
   dev_vitesse_sprint: {
     title: "Vitesse · Sprints explosifs progressifs",
@@ -187,7 +187,7 @@ const sessionCatalog = {
       "Retour calme : 10 min trot léger",
       "Objectif semaine 8 : 30 m en moins de 4,2 s"
     ],
-    image: "schemes/dev_vitesse_sprint.png"
+    image: "schemes/solo_endurance_couloir.png"
   },
   dev_technique_vitesse: {
     title: "Technique · Conduite haute vitesse + frappe",
@@ -202,7 +202,7 @@ const sessionCatalog = {
       "Centre en course depuis la ligne de fond : 3 × 10 (zone 1er poteau + 2e poteau)",
       "Repos : 1 min entre chaque série"
     ],
-    image: "schemes/dev_technique_vitesse.png"
+    image: "schemes/solo_overlap.png"
   },
   dev_pliometrie: {
     title: "Pliométrie · Sauts & puissance explosive",
@@ -219,7 +219,7 @@ const sessionCatalog = {
       "Repos 90 s entre postes",
       "Retour calme : étirements dynamiques 10 min"
     ],
-    image: "schemes/dev_pliometrie.png"
+    image: "schemes/solo_retours_defensifs.png"
   },
   dev_duel_defensif: {
     title: "1v1 · Défensif avancé",
@@ -235,7 +235,7 @@ const sessionCatalog = {
       "Sprint de récupération sur 15 m après être mis en défaut : 4 × 5",
       "Repos 1 min entre chaque exercice"
     ],
-    image: "schemes/dev_duel_defensif.png"
+    image: "schemes/solo_duel_1v1.png"
   },
   dev_fractionne: {
     title: "Endurance · Fractionné 30-30",
@@ -250,7 +250,7 @@ const sessionCatalog = {
       "Repos 3 min à mi-séance",
       "Retour calme : 10 min trot + étirements"
     ],
-    image: "schemes/dev_fractionne.png"
+    image: "schemes/solo_endurance_intervalles.png"
   },
   dev_recuperation: {
     title: "Récupération · Bain froid + étirements",
@@ -297,7 +297,7 @@ const sessionCatalog = {
       "Repos : 90 s entre répétitions",
       "Mesurer ton temps de transition (objectif < 5 s récup → premier appui de sprint)"
     ],
-    image: "schemes/match_transition.png"
+    image: "schemes/solo_retours_defensifs.png"
   },
   spe_positionnement: {
     title: "Positionnement · Ligne défensive",
@@ -312,7 +312,7 @@ const sessionCatalog = {
       "Communication imaginaire : répéter à voix haute 'je sors' / 'couvert' / 'ligne' pendant les exercices",
       "Analyse vidéo : regarder un match d'Andy Robertson, noter 5 positionnements défensifs"
     ],
-    image: "schemes/match_positionnement.png"
+    image: "schemes/solo_retours_defensifs.png"
   },
   spe_phases_arretees: {
     title: "Phases arrêtées · Corners, touches, coups francs",
@@ -327,7 +327,7 @@ const sessionCatalog = {
       "Coup franc direct depuis 20 m (ton point fort à développer) : 3 × 10",
       "Récupération : 45 s entre chaque série"
     ],
-    image: "schemes/spe_centre_tir.png"
+    image: "schemes/solo_overlap.png"
   },
   spe_lecture_jeu: {
     title: "Lecture de jeu · Analyse & décision rapide",
@@ -342,7 +342,7 @@ const sessionCatalog = {
       "Visualisation match : 10 min yeux fermés, imaginer 20 situations de jeu et tes décisions",
       "Note le soir : 3 situations où ta vision a fait la différence"
     ],
-    image: "schemes/spe_vision_jeu.png"
+    image: "schemes/solo_overlap.png"
   },
   spe_analyse_video: {
     title: "Analyse vidéo · Modèles de référence",
@@ -356,8 +356,7 @@ const sessionCatalog = {
       "Regarder 10 min Andy Robertson : pressing, passes courtes, communication",
       "Prendre 10 notes concrètes : 'je dois faire ça dans ma prochaine séance'",
       "Avant de dormir : visualisation 5 min — imaginer que TU es sur le terrain et TU fais ces actions"
-    ],
-    image: "schemes/match_lecture_jeu.png"
+    ]
   },
   spe_force_laterale: {
     title: "Force · Spécifique latéral (unilateral)",
@@ -372,7 +371,7 @@ const sessionCatalog = {
       "Résistance bande élastique : déplacements latéraux 3 × 20 pas",
       "Gainage de fin : 2 × 60 s"
     ],
-    image: "schemes/spe_force_laterale.png"
+    image: "schemes/solo_force_globale.png"
   },
 
   // ── PERFORMANCE MATCH ──
@@ -388,7 +387,7 @@ const sessionCatalog = {
       "Visualisation : 3 duels contre lui et tu gagnes les 3",
       "Note tes 3 priorités défensives pour ce match"
     ],
-    image: "schemes/spe_pressing_bloc.png"
+    image: "schemes/solo_retours_defensifs.png"
   },
   perf_activation: {
     title: "Activation · Pré-match J-1",
@@ -403,7 +402,7 @@ const sessionCatalog = {
       "3 tirs au but côté gauche",
       "Visualisation 5 min : ton meilleur match"
     ],
-    image: "schemes/dev_vitesse_sprint.png"
+    image: "schemes/solo_endurance_couloir.png"
   },
   perf_match_complet: {
     title: "MATCH · Performance complète",
@@ -417,7 +416,7 @@ const sessionCatalog = {
       "Après match : noter 3 réussites + 3 erreurs à corriger",
       "Récupération : étirements 15 min + hydratation"
     ],
-    image: "schemes/match_duel_ca.png"
+    image: "schemes/solo_duel_1v1.png"
   },
   perf_preparation_mentale: {
     title: "Mental · Préparation psychologique",
@@ -430,8 +429,7 @@ const sessionCatalog = {
       "Lecture : 20 min de Robert Greene (Les 48 lois du pouvoir) ou biographie d'un grand joueur",
       "Journal : écrire 3 progrès de la semaine + 1 objectif pour le match",
       "Musique motivation : créer une playlist de 15 min pour l'échauffement"
-    ],
-    image: "schemes/spe_mental_pression.png"
+    ]
   },
   perf_bilan_semaine: {
     title: "Bilan hebdomadaire · Analyse & progression",
@@ -445,8 +443,7 @@ const sessionCatalog = {
       "Identifier le point le plus faible → le mettre en priorité semaine suivante",
       "Planifier les 7 séances de la semaine prochaine",
       "Regarder 1 action de match de Theo Hernandez ou Robertson pour rester motivé"
-    ],
-    image: "schemes/match_lecture_jeu.png"
+    ]
   },
   perf_recuperation_complete: {
     title: "Récupération · Protocole post-match complet",
@@ -460,8 +457,7 @@ const sessionCatalog = {
       "Étirements statiques longs (20 min)",
       "Analyse vidéo du match si disponible : noter 3 erreurs + 3 réussites",
       "Dormir 9 h minimum cette nuit"
-    ],
-    image: "schemes/spe_endurance_specifique.png"
+    ]
   }
 };
 
@@ -694,10 +690,9 @@ const phasePrograms = {
   }
 };
 
-// ── Lightbox ──────────────────────────────────────────────────────────────────
+// ── Lightbox (initialisée une seule fois au démarrage) ────────────────────────
 
 function initLightbox() {
-  // Créer l'overlay s'il n'existe pas déjà
   if (document.getElementById("lightbox-overlay")) return;
 
   const overlay = document.createElement("div");
@@ -719,11 +714,10 @@ function initLightbox() {
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(0,0,0,0.92);
+      background: rgba(0,0,0,0.93);
       align-items: center;
       justify-content: center;
       padding: 1rem;
-      touch-action: pinch-zoom;
     }
     #lightbox-overlay.active {
       display: flex;
@@ -737,47 +731,59 @@ function initLightbox() {
       justify-content: center;
     }
     #lightbox-img {
-      max-width: 100vw;
-      max-height: 90vh;
+      max-width: 96vw;
+      max-height: 88vh;
       width: auto;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       object-fit: contain;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+      touch-action: pinch-zoom;
     }
     #lightbox-close {
       position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: rgba(255,255,255,0.15);
+      top: 0.75rem;
+      right: 0.75rem;
+      background: rgba(255,255,255,0.18);
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      font-size: 1.2rem;
+      width: 48px;
+      height: 48px;
+      font-size: 1.3rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 10000;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .session-image {
+      position: relative;
+      margin-top: 0.75rem;
     }
     .session-image img {
+      width: 100%;
+      border-radius: 8px;
       cursor: zoom-in;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: block;
+      transition: opacity 0.15s ease;
     }
     .session-image img:active {
-      transform: scale(0.97);
+      opacity: 0.85;
     }
-    .session-image::after {
-      content: "🔍 Appuie pour agrandir";
-      display: block;
-      text-align: center;
-      font-size: 0.75rem;
-      opacity: 0.5;
-      margin-top: 0.3rem;
+    .img-zoom-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      opacity: 0.55;
+      color: inherit;
+      pointer-events: none;
+      user-select: none;
     }
   `;
 
@@ -789,7 +795,7 @@ function initLightbox() {
 
   function openLightbox(src, alt) {
     lightboxImg.src = src;
-    lightboxImg.alt = alt;
+    lightboxImg.alt = alt || "Schéma";
     overlay.classList.add("active");
     document.body.style.overflow = "hidden";
   }
@@ -808,8 +814,8 @@ function initLightbox() {
     if (e.key === "Escape") closeLightbox();
   });
 
-  // Délégation d'événements sur les images de séance
-  document.getElementById("sessions").addEventListener("click", (e) => {
+  // Délégation globale sur document — fonctionne même après re-rendu des cartes
+  document.addEventListener("click", (e) => {
     const img = e.target.closest(".session-image img");
     if (img) openLightbox(img.src, img.alt);
   });
@@ -870,7 +876,10 @@ function renderWeek(phaseKey, weekNumber) {
       : "";
 
     const imageHtml = image
-      ? `<div class="session-image"><img src="./${image}" alt="Schéma ${title}" loading="lazy" style="width:100%;border-radius:8px;margin-top:0.75rem;"></div>`
+      ? `<div class="session-image">
+           <img src="./${image}" alt="Schéma ${title}" loading="lazy">
+           <p class="img-zoom-hint">🔍 Appuie sur l'image pour agrandir</p>
+         </div>`
       : "";
 
     card.innerHTML = `
@@ -906,12 +915,12 @@ function renderWeek(phaseKey, weekNumber) {
       renderWeek(phaseSelect.value, parseInt(weekInput.value, 10) || 1);
     });
   });
-
-  // Initialiser le lightbox après chaque rendu
-  initLightbox();
 }
 
 function initApp() {
+  // Lightbox initialisée UNE SEULE FOIS ici
+  initLightbox();
+
   const phaseSelect = document.getElementById("phase-select");
   const weekInput = document.getElementById("week-input");
   const generateBtn = document.getElementById("generate-btn");
