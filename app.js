@@ -48,7 +48,8 @@ const sessionCatalog = {
       "Gainage frontal : 3 × 45 s",
       "Gainage latéral : 3 × 30 s par côté",
       "Étirements : 10 min ischios + quadriceps + fléchisseurs hanche"
-    ]
+    ],
+    image: "schemes/solo_force_globale.png"
   },
   fond_technique_passe: {
     title: "Technique · Passe courte + contrôle orienté",
@@ -62,7 +63,8 @@ const sessionCatalog = {
       "Passes longues à 20 m avec plot cible : 3 × 10 passes",
       "Jeu à 1 touche : passe-passe avec plot ou partenaire imaginaire, 4 × 2 min",
       "Tirs au but après contrôle : 10 tirs côté gauche + 10 côté droit"
-    ]
+    ],
+    image: "schemes/solo_overlap.png"
   },
   fond_endurance_aerob: {
     title: "Endurance · Aérobie continu",
@@ -75,7 +77,8 @@ const sessionCatalog = {
       "Cible : finir 5 km en moins de 28 min (semaine 1), moins de 25 min (semaine 6)",
       "Retour calme : 5 min marche",
       "Étirements statiques : mollets, ischios, quadriceps (30 s chaque)"
-    ]
+    ],
+    image: "schemes/solo_endurance_couloir.png"
   },
   fond_gainage_mobilite: {
     title: "Gainage + Mobilité articulaire",
@@ -91,7 +94,8 @@ const sessionCatalog = {
       "Mobilité hanches : cercles, fente hip flexor, pigeon stretch",
       "Mobilité cheville : 3 × 15 rotations par pied",
       "Foam roller : dos, ischios, IT band (10 min)"
-    ]
+    ],
+    image: "schemes/solo_force_globale.png"
   },
   fond_technique_couloir: {
     title: "Technique · Conduite + centre dans le couloir",
@@ -105,7 +109,8 @@ const sessionCatalog = {
       "Conduite + centre bas (ras du sol) vers plot cible : 3 × 10",
       "Conduite + centre tendu en l'air vers zone penalty : 3 × 10",
       "Récupération : 1 min entre chaque série"
-    ]
+    ],
+    image: "schemes/solo_endurance_couloir.png"
   },
   fond_endurance_intervalles: {
     title: "Endurance · Intervalles couloir",
@@ -120,7 +125,8 @@ const sessionCatalog = {
       "Repos 3 min",
       "Série 3 : 4 × 60 m (montée + retour) avec ballon, récup 1 min",
       "Retour calme + étirements 10 min"
-    ]
+    ],
+    image: "schemes/solo_endurance_intervalles.png"
   },
   fond_duel_1v1_base: {
     title: "1v1 · Fondamentaux défensifs",
@@ -134,7 +140,8 @@ const sessionCatalog = {
       "Tacle glissé sur plot : 3 × 8 (pied gauche + pied droit)",
       "Contre-pied : sprint + pivot 180° sur signal, 4 × 5 reps",
       "Visualisation : 5 min yeux fermés, imaginer 10 duels gagnés"
-    ]
+    ],
+    image: "schemes/solo_duel_1v1.png"
   },
   fond_repos_actif: {
     title: "Repos actif · Récupération",
@@ -165,7 +172,8 @@ const sessionCatalog = {
       "Mollets debout : 4 × 15 reps lents",
       "Gainage de fin : 2 × 60 s",
       "Protéines dans les 30 min post-séance (shake ou repas)"
-    ]
+    ],
+    image: "schemes/dev_force_puissance.png"
   },
   dev_vitesse_sprint: {
     title: "Vitesse · Sprints explosifs progressifs",
@@ -181,7 +189,7 @@ const sessionCatalog = {
       "Retour calme : 10 min trot léger",
       "Objectif semaine 8 : 30 m en moins de 4,2 s"
     ],
-    image: "schemes/intensif_sprints.png"
+    image: "schemes/dev_vitesse_sprint.png"
   },
   dev_technique_vitesse: {
     title: "Technique · Conduite haute vitesse + frappe",
@@ -196,7 +204,7 @@ const sessionCatalog = {
       "Centre en course depuis la ligne de fond : 3 × 10 (zone 1er poteau + 2e poteau)",
       "Repos : 1 min entre chaque série"
     ],
-    image: "schemes/intensif_conduite_frappe.png"
+    image: "schemes/dev_technique_vitesse.png"
   },
   dev_pliometrie: {
     title: "Pliométrie · Sauts & puissance explosive",
@@ -213,7 +221,7 @@ const sessionCatalog = {
       "Repos 90 s entre postes",
       "Retour calme : étirements dynamiques 10 min"
     ],
-    image: "schemes/intensif_pliometrie.png"
+    image: "schemes/dev_pliometrie.png"
   },
   dev_duel_defensif: {
     title: "1v1 · Défensif avancé",
@@ -229,7 +237,7 @@ const sessionCatalog = {
       "Sprint de récupération sur 15 m après être mis en défaut : 4 × 5",
       "Repos 1 min entre chaque exercice"
     ],
-    image: "schemes/solo_duel_1v1.png"
+    image: "schemes/dev_duel_defensif.png"
   },
   dev_fractionne: {
     title: "Endurance · Fractionné 30-30",
@@ -243,7 +251,8 @@ const sessionCatalog = {
       "Récup : trot léger 30 s (ne pas s'arrêter)",
       "Repos 3 min à mi-séance",
       "Retour calme : 10 min trot + étirements"
-    ]
+    ],
+    image: "schemes/dev_fractionne.png"
   },
   dev_recuperation: {
     title: "Récupération · Bain froid + étirements",
@@ -290,7 +299,7 @@ const sessionCatalog = {
       "Repos : 90 s entre répétitions",
       "Mesurer ton temps de transition (objectif < 5 s récup → premier appui de sprint)"
     ],
-    image: "schemes/match_transition.png"
+    image: "schemes/solo_retours_defensifs.png"
   },
   spe_positionnement: {
     title: "Positionnement · Ligne défensive",
@@ -305,7 +314,7 @@ const sessionCatalog = {
       "Communication imaginaire : répéter à voix haute 'je sors' / 'couvert' / 'ligne' pendant les exercices",
       "Analyse vidéo : regarder un match d'Andy Robertson, noter 5 positionnements défensifs"
     ],
-    image: "schemes/match_positionnement.png"
+    image: "schemes/spe_pressing_bloc.png"
   },
   spe_phases_arretees: {
     title: "Phases arrêtées · Corners, touches, coups francs",
@@ -319,7 +328,8 @@ const sessionCatalog = {
       "Coup franc indirect depuis 30 m : 3 × 10, viser loin poteau",
       "Coup franc direct depuis 20 m (ton point fort à développer) : 3 × 10",
       "Récupération : 45 s entre chaque série"
-    ]
+    ],
+    image: "schemes/spe_centre_tir.png"
   },
   spe_lecture_jeu: {
     title: "Lecture de jeu · Analyse & décision rapide",
@@ -334,7 +344,7 @@ const sessionCatalog = {
       "Visualisation match : 10 min yeux fermés, imaginer 20 situations de jeu et tes décisions",
       "Note le soir : 3 situations où ta vision a fait la différence"
     ],
-    image: "schemes/match_lecture_jeu.png"
+    image: "schemes/spe_vision_jeu.png"
   },
   spe_analyse_video: {
     title: "Analyse vidéo · Modèles de référence",
@@ -362,7 +372,8 @@ const sessionCatalog = {
       "Step-up sur banc : 3 × 10 par jambe avec haltère",
       "Résistance bande élastique : déplacements latéraux 3 × 20 pas",
       "Gainage de fin : 2 × 60 s"
-    ]
+    ],
+    image: "schemes/spe_force_laterale.png"
   },
 
   // ── PERFORMANCE MATCH ──
@@ -377,7 +388,8 @@ const sessionCatalog = {
       "Préparer ta réponse : si coupeur → fermer l'intérieur, si débordeur → tenir ta ligne",
       "Visualisation : 3 duels contre lui et tu gagnes les 3",
       "Note tes 3 priorités défensives pour ce match"
-    ]
+    ],
+    image: "schemes/spe_pressing_bloc.png"
   },
   perf_activation: {
     title: "Activation · Pré-match J-1",
@@ -391,7 +403,8 @@ const sessionCatalog = {
       "Jonglerie + passes courtes : 10 min",
       "3 tirs au but côté gauche",
       "Visualisation 5 min : ton meilleur match"
-    ]
+    ],
+    image: "schemes/dev_vitesse_sprint.png"
   },
   perf_match_complet: {
     title: "MATCH · Performance complète",
@@ -404,7 +417,8 @@ const sessionCatalog = {
       "Compter mentalement ou demander à quelqu'un : centres réussis, duels gagnés, sprints couverts",
       "Après match : noter 3 réussites + 3 erreurs à corriger",
       "Récupération : étirements 15 min + hydratation"
-    ]
+    ],
+    image: "schemes/spe_endurance_specifique.png"
   },
   perf_preparation_mentale: {
     title: "Mental · Préparation psychologique",
@@ -417,7 +431,8 @@ const sessionCatalog = {
       "Lecture : 20 min de Robert Greene (Les 48 lois du pouvoir) ou biographie d'un grand joueur",
       "Journal : écrire 3 progrès de la semaine + 1 objectif pour le match",
       "Musique motivation : créer une playlist de 15 min pour l'échauffement"
-    ]
+    ],
+    image: "schemes/spe_mental_pression.png"
   },
   perf_bilan_semaine: {
     title: "Bilan hebdomadaire · Analyse & progression",
@@ -590,7 +605,7 @@ const phasePrograms = {
       { jour: "Lundi",    key: "spe_overlap" },
       { jour: "Mardi",    key: "spe_transition" },
       { jour: "Mercredi", key: "dev_fractionne" },
-      { jour: "Jeudi",    key: "spe_duel_defensif" || "dev_duel_defensif" },
+      { jour: "Jeudi",    key: "dev_duel_defensif" },
       { jour: "Vendredi", key: "spe_phases_arretees" },
       { jour: "Samedi",   key: "spe_positionnement" },
       { jour: "Dimanche", key: "spe_analyse_video" }
