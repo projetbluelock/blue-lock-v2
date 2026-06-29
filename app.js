@@ -694,6 +694,127 @@ const phasePrograms = {
   }
 };
 
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+
+function initLightbox() {
+  // Créer l'overlay s'il n'existe pas déjà
+  if (document.getElementById("lightbox-overlay")) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "lightbox-overlay";
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-modal", "true");
+  overlay.setAttribute("aria-label", "Schéma en plein écran");
+  overlay.innerHTML = `
+    <div id="lightbox-inner">
+      <button id="lightbox-close" aria-label="Fermer">✕</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+  `;
+
+  const style = document.createElement("style");
+  style.textContent = `
+    #lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      touch-action: pinch-zoom;
+    }
+    #lightbox-overlay.active {
+      display: flex;
+    }
+    #lightbox-inner {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox-img {
+      max-width: 100vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    }
+    #lightbox-close {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .session-image img {
+      cursor: zoom-in;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .session-image img:active {
+      transform: scale(0.97);
+    }
+    .session-image::after {
+      content: "🔍 Appuie pour agrandir";
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      opacity: 0.5;
+      margin-top: 0.3rem;
+    }
+  `;
+
+  document.head.appendChild(style);
+  document.body.appendChild(overlay);
+
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("lightbox-close");
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+    lightboxImg.src = "";
+  }
+
+  closeBtn.addEventListener("click", closeLightbox);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+
+  // Délégation d'événements sur les images de séance
+  document.getElementById("sessions").addEventListener("click", (e) => {
+    const img = e.target.closest(".session-image img");
+    if (img) openLightbox(img.src, img.alt);
+  });
+}
+
 // ── Rendu interface ───────────────────────────────────────────────────────────
 
 function renderPhaseSummary(phaseKey) {
@@ -749,7 +870,7 @@ function renderWeek(phaseKey, weekNumber) {
       : "";
 
     const imageHtml = image
-      ? `<div class="session-image"><img src="https://raw.githubusercontent.com/projetbluelock/blue-lock-v2/main/${image}" alt="Schéma ${title}" loading="lazy" style="width:100%;border-radius:8px;margin-top:0.75rem;"></div>`
+      ? `<div class="session-image"><img src="./${image}" alt="Schéma ${title}" loading="lazy" style="width:100%;border-radius:8px;margin-top:0.75rem;"></div>`
       : "";
 
     card.innerHTML = `
@@ -785,6 +906,9 @@ function renderWeek(phaseKey, weekNumber) {
       renderWeek(phaseSelect.value, parseInt(weekInput.value, 10) || 1);
     });
   });
+
+  // Initialiser le lightbox après chaque rendu
+  initLightbox();
 }
 
 function initApp() {
