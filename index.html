@@ -5,13 +5,41 @@
   <title>Projet Blue Lock v2 - Panel d'entraînement</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .session-steps {
+      margin: 0.75rem 0 0.5rem 1.2rem;
+      padding: 0;
+      font-size: 0.88rem;
+      color: #c8d8c0;
+      line-height: 1.75;
+    }
+    .session-steps li {
+      margin-bottom: 0.25rem;
+      padding-left: 0.3rem;
+    }
+    .session-steps li::marker {
+      color: #00ff88;
+      font-weight: bold;
+    }
+    .phase-badge {
+      display: inline-block;
+      background: #00ff8822;
+      border: 1px solid #00ff8866;
+      color: #00ff88;
+      border-radius: 20px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.78rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
 </head>
 <body>
   <header class="app-header">
     <div class="logo-circle">PB</div>
     <div class="title-block">
       <h1>Projet Blue Lock</h1>
-      <p>Assistant d'entraînement solo pour latéral gauche sur 6 mois.</p>
+      <p>Programme élite 24 semaines · Latéral gauche · Vision de jeu → Corps de champion</p>
     </div>
   </header>
 
@@ -21,14 +49,15 @@
       <div class="config-row">
         <label for="phase-select">Phase :</label>
         <select id="phase-select">
-          <option value="base">Phase 1 · Bases (semaines 1 à 8)</option>
-          <option value="intensif">Phase 2 · Intensif (semaines 1 à 8)</option>
-          <option value="match">Phase 3 · Match player (semaines 1 à 8)</option>
+          <option value="fondations">Phase 1 · Fondations (Semaines 1–6)</option>
+          <option value="developpement">Phase 2 · Développement Physique (Semaines 7–14)</option>
+          <option value="specialisation">Phase 3 · Spécialisation Latéral (Semaines 15–20)</option>
+          <option value="performance">Phase 4 · Performance Match (Semaines 21–24)</option>
         </select>
       </div>
       <div class="config-row">
-        <label for="week-input">Semaine dans la phase (1–8) :</label>
-        <input type="number" id="week-input" min="1" max="8" value="1">
+        <label for="week-input">Semaine dans la phase :</label>
+        <input type="number" id="week-input" min="1" max="6" value="1">
       </div>
       <button id="generate-btn" class="primary-btn">Générer la semaine</button>
     </section>
@@ -39,7 +68,7 @@
   </main>
 
   <footer class="app-footer">
-    <p>Projet Blue Lock v2 · Hébergeable sur GitHub Pages · Optimisé pour mobile.</p>
+    <p>Projet Blue Lock v2 · Programme 4 phases · 24 semaines · 168 séances · Optimisé mobile</p>
   </footer>
 
   <script src="app.js"></script>
